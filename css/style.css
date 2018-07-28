@@ -1,0 +1,48 @@
+/* GlOBAL STYLES */
+
+
+
+/* HEADER STYLES */
+.title {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+header {
+    background-color: darkolivegreen;
+    min-height: 50px;
+}
+
+/* MAIN STYLES */
+
+.imgBox{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 60px 50px;
+    overflow: hidden;
+}
+
+.col-narrow {
+    width: 30%;
+    float: left;
+    
+}
+
+.col-wide {
+    width: 70%;
+    float: left;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
