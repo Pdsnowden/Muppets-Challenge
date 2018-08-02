@@ -1,37 +1,43 @@
+// TESTING***  CHANGES THE IMAGE ONCLICK 
+document.querySelector('img').addEventListener('click', changeImg);
 
-document.querySelector("img").addEventListener("click", changeImg);
+function changeImg () {
+  let img = document.querySelector('img');
 
-function changeImg() {
-    var img = document.querySelector("img");
-
-    img.src = "images/animal.png";
-    console.log(img);
+  img.src = 'images/animal.png';
+  console.log(img);
 }
 
+// TIMER 
 const TODAY = new Date();
 const YEAR = TODAY.getFullYear();
-const FOOTERTEXT = document.querySelector(".date");
+const FOOTERTEXT = document.querySelector('.date');
 
 FOOTERTEXT.innerHTML = (`Copyright ${YEAR}`);
 
-
 addEventListener('load', function () {
-    var ONE_SECOND = 1000,
-        lastTick = +new Date(),
-        timer = document.querySelector(".timer");
-        seconds = 60;
+  let ONE_SECOND = 1000,
+    lastTick = +new Date(),
+    timer = document.querySelector('.timer');
+  let seconds = 60;
 
-    function tick() {
-        var now = +new Date(),
-            nextTick = 2 * ONE_SECOND - (now - lastTick);
+  function tick () {
+    let now = +new Date(),
+      nextTick = 2 * ONE_SECOND - (now - lastTick);
 
-        lastTick = now;
-        if (--seconds) {
-            setTimeout(tick, nextTick > ONE_SECOND ? ONE_SECOND : nextTick);
-        }
-        timer.innerHTML = "0:" + (seconds < 10 ? '0' : '') + seconds;
+    lastTick = now;
+    if (--seconds) {
+      setTimeout(tick, nextTick > ONE_SECOND ? ONE_SECOND : nextTick);
     }
+    timer.innerHTML = '0:' + (seconds < 10 ? '0' : '') + seconds;
+  }
 
-    timer.innerHTML = "01:00";
-    setTimeout(tick, ONE_SECOND);
+  timer.innerHTML = '01:00';
+  setTimeout(tick, ONE_SECOND);
 });
+
+// TEXT BOX
+
+const USERTEXT = document.querySelector('.textAnswer');
+
+USERTEXT.value = 'kermit'; 
