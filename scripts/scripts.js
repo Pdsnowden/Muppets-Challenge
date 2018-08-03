@@ -40,4 +40,6 @@ addEventListener('load', function () {
 
 const USERTEXT = document.querySelector('.textAnswer');
 
-USERTEXT.value = 'kermit'; 
+function boxClicked() {
+  USERTEXT.value = '';
+}
