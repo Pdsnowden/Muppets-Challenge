@@ -1,14 +1,13 @@
-// TESTING***  CHANGES THE IMAGE ONCLICK 
+// TESTING***  CHANGES THE IMAGE ONCLICK
 document.querySelector('img').addEventListener('click', changeImg);
 
 function changeImg () {
   let img = document.querySelector('img');
 
   img.src = 'images/animal.png';
-  console.log(img);
 }
 
-// TIMER 
+// TIMER
 const TODAY = new Date();
 const YEAR = TODAY.getFullYear();
 const FOOTERTEXT = document.querySelector('.date');
@@ -16,10 +15,10 @@ const FOOTERTEXT = document.querySelector('.date');
 FOOTERTEXT.innerHTML = (`Copyright ${YEAR}`);
 
 addEventListener('load', function () {
-  let ONE_SECOND = 1000,
-    lastTick = +new Date(),
-    timer = document.querySelector('.timer');
+  let ONE_SECOND = 1000;
   let seconds = 60;
+  lastTick = +new Date(),
+  timer = document.querySelector('.timer');
 
   function tick () {
     let now = +new Date(),
@@ -40,6 +39,20 @@ addEventListener('load', function () {
 
 const USERTEXT = document.querySelector('.textAnswer');
 
-function boxClicked() {
+// Clear box on click
+function boxClicked () {
+  clearTextBox();
+}
+// gets user guesss on enter
+function handleEnter(e) {
+  e = e || window.event;
+  if(e.keyCode === 13) {
+    var elem = e.srcElement || e.target;
+    console.log(elem.value);
+    clearTextBox();
+  }
+}
+
+function clearTextBox() {
   USERTEXT.value = '';
 }
