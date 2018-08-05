@@ -56,3 +56,30 @@ function handleEnter(e) {
 function clearTextBox() {
   USERTEXT.value = '';
 }
+
+const MUPPETS = {
+  title: 'Muppets',
+  list: {
+    kermit: {
+      name:"kermit",
+      imageLocation: '..images/kermit.png',
+    },
+    animal: {
+      name:"animal",
+      imageLocation: '..images/animal.png',
+    },
+  },
+};
+/*
+
+for (var i =0; i < MUPPETS.)
+
+  kermit: {
+    name: 'kermit',
+    imageLocation: '..images/kermit.png',
+  },
+  animal: {
+    name: 'animal',
+    imageLocation: '..images/animal.png',
+  }
+*/
