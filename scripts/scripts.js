@@ -57,19 +57,23 @@ function clearTextBox() {
   USERTEXT.value = '';
 }
 
-const MUPPETS = {
-  title: 'Muppets',
-  list: {
-    kermit: {
-      name:"kermit",
-      imageLocation: '..images/kermit.png',
-    },
-    animal: {
-      name:"animal",
-      imageLocation: '..images/animal.png',
-    },
-  },
-};
+const MUPPETS = [
+  { name: 'animal', ulr: '..images/animal.png'},
+  { name: 'kermit', url: '..images/kermit.png'},
+ 
+]
+
+n = (MUPPETS.length);
+
+var k = "";
+
+for (i = 0; i < n; i++){
+  var list = MUPPETS[i].name;
+  k += "<li>" +list+"</li>";
+}
+
+var myList = document.querySelector('.names');
+myList.innerHTML = k;
 /*
 
 for (var i =0; i < MUPPETS.)
