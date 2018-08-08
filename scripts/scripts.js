@@ -1,3 +1,20 @@
+// MUPPET Array
+const MUPPETS = [
+  { name: 'animal', ulr: '..images/animal.png'},
+  { name: 'kermit', url: '..images/kermit.png'},
+  { name: 'dr honeydew', url: '..images/drhoneydew.png'},
+  { name: 'dr teeth', url: '..images/drTeeth.png'},
+  { name: 'fozzy', url: '..images/fozzy.png'},
+  { name: 'gonzo', url: '..images/gonzo.png'},
+  { name: 'miss piggie', url: '..images/misspiggie.png'},
+  { name: 'pepe', url: '..images/pepe.png'},
+  { name: 'rizzo', url: '..images/rizzo.png'},
+  { name: 'rowlf', url: '..images/rowlf.png'},
+  { name: 'sam eagle', url: '..images/sameagle.png'},
+  { name: 'scooter', url: '..images/scooter.png'},
+  { name: 'swedishchef', url: '..images/swedishChef.png'},
+]
+
 // TESTING***  CHANGES THE IMAGE ONCLICK
 document.querySelector('img').addEventListener('click', changeImg);
 
@@ -57,19 +74,21 @@ function clearTextBox() {
   USERTEXT.value = '';
 }
 
-const MUPPETS = [
-  { name: 'animal', ulr: '..images/animal.png'},
-  { name: 'kermit', url: '..images/kermit.png'},
- 
-]
-
 n = (MUPPETS.length);
 
 var k = "";
 
 for (i = 0; i < n; i++){
   var list = MUPPETS[i].name;
-  k += "<li>" +list+"</li>";
+  if (i % 4 === 0){
+    if (i === 0){
+      k += "<li>" +list+"</li>"; 
+    } else {
+    k += "chirp"  + "<li>" +list+"</li>";
+    }
+  } else {
+    k += "<li>" +list+"</li>"; 
+  }
 }
 
 var myList = document.querySelector('.names');

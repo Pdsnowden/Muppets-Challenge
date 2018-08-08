@@ -53,6 +53,20 @@ header {
     
 }
 
+/* NAMES LIST */
+
+.names {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    font-size: 2em;
+    max-width: 75%;
+}
+
+.names li {
+    padding: 5px;
+    white-space:nowrap;
+}
 
 /* TEXT BOX */
 
