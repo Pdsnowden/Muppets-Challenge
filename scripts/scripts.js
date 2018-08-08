@@ -12,7 +12,7 @@ const MUPPETS = [
   { name: 'rowlf', url: '..images/rowlf.png'},
   { name: 'sam eagle', url: '..images/sameagle.png'},
   { name: 'scooter', url: '..images/scooter.png'},
-  { name: 'swedishchef', url: '..images/swedishChef.png'},
+  { name: 'swedish chef', url: '..images/swedishChef.png'},
 ]
 
 // TESTING***  CHANGES THE IMAGE ONCLICK
@@ -84,7 +84,7 @@ for (i = 0; i < n; i++){
     if (i === 0){
       k += "<li>" +list+"</li>"; 
     } else {
-    k += "chirp"  + "<li>" +list+"</li>";
+    k += "<br>"  + "<li>" +list+"</li>";
     }
   } else {
     k += "<li>" +list+"</li>"; 

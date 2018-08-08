@@ -55,17 +55,23 @@ header {
 
 /* NAMES LIST */
 
+.namesBox {
+    display: flex; 
+    justify-content: space-around;
+}
+
 .names {
-    display: flex;
-    justify-content: space-evenly;
-    margin: auto;
     font-size: 2em;
     max-width: 75%;
+    text-align: center;
 }
 
 .names li {
     padding: 5px;
     white-space:nowrap;
+    display: inline-block;
+    border: solid black 2px;
+    margin: 6px;
 }
 
 /* TEXT BOX */
@@ -73,7 +79,7 @@ header {
 .textArea {
     display: flex;
     justify-content: center;
-
+    margin-top: 55px;
 }
 
 input {
