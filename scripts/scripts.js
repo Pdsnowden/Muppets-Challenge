@@ -15,6 +15,27 @@ const MUPPETS = [
   { name: 'swedish chef', url: '..images/swedishChef.png'},
 ]
 
+// MAIN FUNCTION
+function startGame() {
+  var gameArry = scrambleArray();
+
+};
+
+// SCRAMBLES MUPPET ARRAY
+function scrambleArray() {
+  var finishedScramble = [];
+  var muppetsCopy = MUPPETS;
+
+  while (muppetsCopy.length !== 0) {
+    let randomIndex = Math.floor(Math.random() * muppetsCopy.length);
+    finishedScramble.push(muppetsCopy[randomIndex]);
+    muppetsCopy.splice(randomIndex, 1);
+  }
+};
+
+
+
+
 // TESTING***  CHANGES THE IMAGE ONCLICK
 document.querySelector('img').addEventListener('click', changeImg);
 
@@ -93,16 +114,15 @@ for (i = 0; i < n; i++){
 
 var myList = document.querySelector('.names');
 myList.innerHTML = k;
-/*
 
-for (var i =0; i < MUPPETS.)
 
-  kermit: {
-    name: 'kermit',
-    imageLocation: '..images/kermit.png',
-  },
-  animal: {
-    name: 'animal',
-    imageLocation: '..images/animal.png',
-  }
-*/
+// SHUFFLE ARRAY ?
+
+var shuffleArrayPhoto = MUPPETS.sort(function() { return 0.5 - Math.random() });
+var shuffleArrayList = MUPPETS.sort(function() { return 0.5 - Math.random() });
+
+
+
+// CALLING MAIN FUNCTION 
+
+window.onload = startGame();
